@@ -26,35 +26,41 @@ class HotelAlgorithms {
             a.checkIn - b.checkIn
         );
 
-        const rooms = [[]];  // Lista de quartos, cada quarto contém uma lista de reservas
-        
+        const roomHeap = new MinHeap();
+        const rooms = []; // Para manter o registro de todas as reservas por quarto
+
         for (const reservation of sortedReservations) {
-            // Tenta encontrar um quarto disponível
-            let roomFound = false;
+            let roomAssigned = false;
             
-            for (let i = 0; i < rooms.length; i++) {
-                const room = rooms[i];
-                if (room.length === 0 || !this.hasOverlap(room, reservation)) {
-                    room.push(reservation);
-                    reservation.room = i;
-                    roomFound = true;
-                    break;
+            // Verifica se o quarto com checkout mais próximo está disponível
+            if (roomHeap.size() > 0) {
+                const earliestRoom = roomHeap.peek();
+                
+                // Se o quarto com checkout mais próximo estiver disponível
+                if (earliestRoom.lastCheckOut <= reservation.checkIn) {
+                    // Atualiza o checkout do quarto e suas reservas
+                    earliestRoom.lastCheckOut = reservation.checkOut;
+                    earliestRoom.reservations.push(reservation);
+                    reservation.room = earliestRoom.id;
+                    roomHeap.updateRoot(reservation.checkOut);
+                    roomAssigned = true;
                 }
             }
-            
-            // Se não encontrou quarto disponível, cria um novo
-            if (!roomFound) {
-                rooms.push([reservation]);
-                reservation.room = rooms.length - 1;
+
+            // Se nenhum quarto existente estiver disponível, cria um novo
+            if (!roomAssigned) {
+                const newRoom = {
+                    id: rooms.length,
+                    lastCheckOut: reservation.checkOut,
+                    reservations: [reservation]
+                };
+                rooms.push(newRoom);
+                roomHeap.insert(newRoom);
+                reservation.room = newRoom.id;
             }
         }
 
+        // Retorna os quartos com suas reservas
         return rooms;
-    }
-
-    static hasOverlap(room, newReservation) {
-        return room.some(existingReservation => 
-            existingReservation.overlaps(newReservation)
-        );
     }
 }
