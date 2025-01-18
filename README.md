@@ -10,7 +10,7 @@
 | 211030774  |  Gustavo França Boa Sorte |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+SmartHotel é uma aplicação web para gerenciamento de reservas de hotel utilizando algoritmos ambiciosos (greedy) para otimização da ocupação dos quartos. A aplicação utiliza dos algoritmos de interval scheduling e interval partitioning para otimizar a distribuição das reservas nos quartos.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
