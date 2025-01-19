@@ -2,6 +2,7 @@ class HotelManager {
     constructor() {
         this.reservations = [];
         this.currentId = 1;
+        this.timelineManager = new TimelineManager();
         this.loadReservations();
         this.setupEventListeners();
     }
@@ -95,6 +96,11 @@ class HotelManager {
             `;
             tbody.appendChild(tr);
         });
+
+        // Atualiza a timeline se ela estiver visível
+        if (document.getElementById('timelineModal').classList.contains('show')) {
+            this.timelineManager.updateTimeline();
+        }
     }
 
     saveReservations() {
