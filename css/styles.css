@@ -42,6 +42,57 @@
     font-size: 0.875rem;
 }
 
+/* Estilos da Timeline */
+.timeline-container {
+    overflow-y: auto;
+    max-height: 70vh;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.timeline-wrapper {
+    min-height: 400px;
+}
+
+.reservation-timeline-item {
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.timeline-item {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    padding: 4px;
+}
+
+.vis-timeline {
+    border: none !important;
+}
+
+.vis-panel.vis-center {
+    overflow-y: hidden !important;
+}
+
+.vis-panel.vis-left {
+    overflow-y: hidden !important;
+}
+
+.vis-labelset {
+    overflow-y: hidden !important;
+}
+
+.vis-item {
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+.vis-item.vis-selected {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
 @media (max-width: 768px) {
     .stats-container {
         flex-direction: column;
