@@ -19,6 +19,7 @@ SmartHotel é uma aplicação web para gerenciamento de reservas de hotel utiliz
 - Remover reservas existentes
 - Visualização em lista de todas as reservas
 - Alocação automática de quartos usando algoritmos greedy
+- Área com estátisticas de número de reservas e quantidade de quartos necessários para atender a demanda.
 
 ### 2. Visualização da Disposição dos Quartos
 - Timeline interativa mostrando todas as reservas por quarto
@@ -42,6 +43,7 @@ SmartHotel é uma aplicação web para gerenciamento de reservas de hotel utiliz
 *Lista de todas as reservas*
 
 ![](assets/timeline.png)<br>
+*Visualização de todas as reservas pela timeline*
 
 ## Instalação 
 
