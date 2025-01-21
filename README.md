@@ -73,6 +73,9 @@ SmartHotel é uma aplicação web para gerenciamento de reservas de hotel utiliz
 - vis-timeline 7.7.2 (Biblioteca para visualização da timeline)
 - Font Awesome 5.15.3 (Ícones)
 
+## Vídeo de apresentação do projeto
+
+[Vídeo](https://youtu.be/NoorZ-IHo7Q)
 
 ## Outros 
 O projeto foi desenvolvido como parte da disciplina de Projeto de Algoritmos da Universidade de Brasília, com foco em algoritmos ambiciosos (greedy).
