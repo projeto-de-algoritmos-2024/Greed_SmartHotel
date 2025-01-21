@@ -75,7 +75,7 @@ SmartHotel é uma aplicação web para gerenciamento de reservas de hotel utiliz
 
 ## Vídeo de apresentação do projeto
 
-[Vídeo](https://youtu.be/NoorZ-IHo7Q)
+[https://youtu.be/NoorZ-IHo7Q](https://youtu.be/NoorZ-IHo7Q)
 
 ## Outros 
 O projeto foi desenvolvido como parte da disciplina de Projeto de Algoritmos da Universidade de Brasília, com foco em algoritmos ambiciosos (greedy).
